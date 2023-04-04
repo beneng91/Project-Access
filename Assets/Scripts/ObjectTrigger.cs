@@ -55,8 +55,8 @@ public class ObjectTrigger : MonoBehaviour
             {
                 Debug.Log("Key Destructible Triggered");
                 //objectHit.collider.gameObject.GetComponent<Animator>();
-                objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
                 //keyItem.SetActive(true);
+                objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
 
             if (objectHit.collider.gameObject.layer == layerKey)
