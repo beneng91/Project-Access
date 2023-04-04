@@ -39,7 +39,7 @@ public class CharacterController : MonoBehaviour
         rotation.x -= Input.GetAxis("Mouse Y") * lookSpeed;
 
         // Clamp the camera rotation to prevent the camera from flipping over
-        rotation.x = Mathf.Clamp(rotation.x, -60f, 60f);
+        rotation.x = Mathf.Clamp(rotation.x, -15f, 30f);
 
         // Apply the camera rotation to the camera transform
         cameraTransform.localRotation = Quaternion.Euler(rotation.x, 0, 0);
