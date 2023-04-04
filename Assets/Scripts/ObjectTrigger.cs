@@ -8,6 +8,7 @@ public class ObjectTrigger : MonoBehaviour
     public KeyCode triggerObject;
     public GameObject raycastObject;
     public GameObject keyItem;
+    //public GameObject playerPos;
     private int layerDestructible;
     private int layerKey;
     private int layerKeyDestructible;
@@ -43,19 +44,19 @@ public class ObjectTrigger : MonoBehaviour
         {
             if (objectHit.collider.gameObject.layer == layerDestructible)
             {
+                Debug.Log("Destructible Triggered");
                 //Play Animation
                 //objectHit.collider.gameObject.GetComponent<Animator>();
 
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
-                Debug.Log("Destructible Triggered");
             }
 
             if (objectHit.collider.gameObject.layer == layerKeyDestructible)
             {
+                Debug.Log("Key Destructible Triggered");
                 //objectHit.collider.gameObject.GetComponent<Animator>();
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
                 //keyItem.SetActive(true);
-                Debug.Log("Key Destructible Triggered");
             }
 
             if (objectHit.collider.gameObject.layer == layerKey)
@@ -67,8 +68,8 @@ public class ObjectTrigger : MonoBehaviour
 
             if (objectHit.collider.gameObject.layer == layerInteractable)
             {
-                //objectHit.collider.gameObject.GetComponent<Animator>();
                 Debug.Log("Interactable Triggered");
+                //objectHit.collider.gameObject.GetComponent<Animator>();
             }
         }
     }
