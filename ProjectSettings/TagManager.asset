@@ -11,10 +11,10 @@ TagManager:
   - postprocessing
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Destructible
+  - Interactable
+  - KeyDestructible
+  - Key
   - 
   - 
   - 
