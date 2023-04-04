@@ -1084,9 +1084,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  cameraDistance: 5
-  cameraHeight: 2
-  lookSpeed: 2
+  cameraDistance: 2
+  cameraHeight: 1.9
+  lookSpeed: 1.5
 --- !u!143 &8396179390172786745
 CharacterController:
   m_ObjectHideFlags: 0
