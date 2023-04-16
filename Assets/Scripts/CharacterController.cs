@@ -8,6 +8,7 @@ public class CharacterController : MonoBehaviour
     public float cameraDistance = 5f;
     public float cameraHeight = 2f;
     public float lookSpeed = 2f;
+    public float cameraOffset = 0.8f;
 
     private UnityEngine.CharacterController controller;
     private Transform cameraTransform;
@@ -46,7 +47,8 @@ public class CharacterController : MonoBehaviour
         transform.localRotation = Quaternion.Euler(0, rotation.y, 0);
 
         // Update the camera position to keep it centered behind the player
-        Vector3 cameraPosition = transform.position - transform.forward * cameraDistance + transform.up * cameraHeight;
+        //Vector3 cameraPosition = transform.position - transform.forward * cameraDistance + transform.up * cameraHeight;
+        Vector3 cameraPosition = transform.position - transform.forward * cameraDistance + transform.up * cameraHeight + transform.right * cameraOffset;
         cameraTransform.position = cameraPosition;
     }
 }
