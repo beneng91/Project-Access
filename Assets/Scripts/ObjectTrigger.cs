@@ -8,12 +8,12 @@ public class ObjectTrigger : MonoBehaviour
     public KeyCode triggerObject;
     public GameObject raycastObject;
     public GameObject keyItem;
+    public GameObject keyInteractable;
     //public GameObject playerPos;
     private int layerDestructible;
     private int layerKey;
     private int layerKeyDestructible;
     private int layerInteractable;
-    private bool isDestroyed;
     private bool keyAcquired;
 
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class ObjectTrigger : MonoBehaviour
         layerDestructible = LayerMask.NameToLayer("Destructible");
         layerKey = LayerMask.NameToLayer("Key");
         layerKeyDestructible = LayerMask.NameToLayer("KeyDestructible");
-        layerInteractable = LayerMask.NameToLayer("layerInteractable");
+        layerInteractable = LayerMask.NameToLayer("Interactable");
         keyAcquired = false;
     }
 
@@ -55,21 +55,27 @@ public class ObjectTrigger : MonoBehaviour
             {
                 Debug.Log("Key Destructible Triggered");
                 //objectHit.collider.gameObject.GetComponent<Animator>();
-                //keyItem.SetActive(true);
+                keyItem.SetActive(true);
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
 
             if (objectHit.collider.gameObject.layer == layerKey)
             {
                 Debug.Log("Key Triggered");
-                //keyAcquired = true;
-                //keyItem.SetActive(false);
+                keyAcquired = true;
+                keyItem.SetActive(false);
             }
 
             if (objectHit.collider.gameObject.layer == layerInteractable)
             {
                 Debug.Log("Interactable Triggered");
-                //objectHit.collider.gameObject.GetComponent<Animator>();
+                if (keyAcquired == true)
+                {
+                    Debug.Log("Key Interactable Triggered");
+                    //objectHit.collider.gameObject.GetComponent<Animator>();
+                    //or
+                    keyInteractable.SetActive(false);
+                }
             }
         }
     }
