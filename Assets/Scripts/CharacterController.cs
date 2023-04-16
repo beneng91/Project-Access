@@ -47,7 +47,6 @@ public class CharacterController : MonoBehaviour
         transform.localRotation = Quaternion.Euler(0, rotation.y, 0);
 
         // Update the camera position to keep it centered behind the player
-        //Vector3 cameraPosition = transform.position - transform.forward * cameraDistance + transform.up * cameraHeight;
         Vector3 cameraPosition = transform.position - transform.forward * cameraDistance + transform.up * cameraHeight + transform.right * cameraOffset;
         cameraTransform.position = cameraPosition;
     }
