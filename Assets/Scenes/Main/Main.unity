@@ -15970,6 +15970,14 @@ PrefabInstance:
       propertyPath: m_ReflectionProbeUsage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2614673990656034404, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614673990656034404, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6671875460297743242, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
       propertyPath: orthographic
       value: 0
