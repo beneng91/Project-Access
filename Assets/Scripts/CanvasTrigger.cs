@@ -44,50 +44,29 @@ public class CanvasTrigger : MonoBehaviour
             {
                 clearE.SetActive(true);
             }
-            else
+            else if (objectHit.collider.gameObject.layer == layerBKeyDestroy) //Destroy barrel, spawn key
             {
-                clearE.SetActive(false);
+                clearE.SetActive(true);
             }
-
-            if (objectHit.collider.gameObject.layer == layerBKeyDestroy) //Destroy barrel, spawn key
+            else if (objectHit.collider.gameObject.layer == layerCDestroy) //Destroy crate, nothing else
+            {
+                clearE.SetActive(true);
+            }
+            else if (objectHit.collider.gameObject.layer == layerCKeyDestroy) //Destroy crate, spawn key
+            {
+                clearE.SetActive(true);
+            }
+            else if (objectHit.collider.gameObject.layer == layerKey)
+            {
+                clearE.SetActive(true);
+            }
+            else if (objectHit.collider.gameObject.layer == layerInteractable)
             {
                 clearE.SetActive(true);
             }
             else
             {
                 clearE.SetActive(false);
-            }
-
-            if (objectHit.collider.gameObject.layer == layerCDestroy) //Destroy crate, nothing else
-            {
-                clearE.SetActive(true);
-            }
-            else
-            {
-                clearE.SetActive(false);
-            }
-
-            if (objectHit.collider.gameObject.layer == layerCKeyDestroy) //Destroy crate, spawn key
-            {
-                clearE.SetActive(true);
-            }
-            else
-            {
-                clearE.SetActive(false);
-            }
-
-            if (objectHit.collider.gameObject.layer == layerKey)
-            {
-                clearE.SetActive(true);
-            }
-            else
-            {
-                clearE.SetActive(false);
-            }
-
-            if (objectHit.collider.gameObject.layer == layerInteractable)
-            {
-                clearE.SetActive(true);
             }
         }
     }
