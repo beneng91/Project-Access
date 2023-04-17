@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1468028454600609500
+--- !u!1 &3451478666808545942
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1465350203566126354}
-  - component: {fileID: 1454225708644040306}
-  - component: {fileID: 1443894216599002492}
-  - component: {fileID: 1494768460990814158}
-  - component: {fileID: 1010995207}
-  m_Layer: 6
+  - component: {fileID: 3453303967080917336}
+  - component: {fileID: 3429230556458721848}
+  - component: {fileID: 3436492486880198966}
+  - component: {fileID: 3388706281056652164}
+  m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1465350203566126354
+--- !u!4 &3453303967080917336
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468028454600609500}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.242, y: 1.968, z: 0.047326565}
+  m_GameObject: {fileID: 3451478666808545942}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1454225708644040306
+--- !u!33 &3429230556458721848
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468028454600609500}
-  m_Mesh: {fileID: 0}
---- !u!23 &1443894216599002492
+  m_GameObject: {fileID: 3451478666808545942}
+  m_Mesh: {fileID: 4300000, guid: 63a1961903c909f45a3883379ad3b0fe, type: 3}
+--- !u!23 &3436492486880198966
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468028454600609500}
+  m_GameObject: {fileID: 3451478666808545942}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,192 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1494768460990814158
+--- !u!64 &3388706281056652164
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468028454600609500}
+  m_GameObject: {fileID: 3451478666808545942}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
---- !u!114 &1010995207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468028454600609500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b55d9bb3ec909340848c72a5bfc0ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
-  voronoi:
-    amount: 30
-    centerBias: 0
-  splinters:
-    axis: 1
-    amount: 10
-    strength: 0.7
-    centerBias: 0
-  slabs:
-    axis: 1
-    amount: 30
-    strength: 0.7
-    centerBias: 0
-  radial:
-    centerAxis: 1
-    radius: 1
-    divergence: 1
-    restrictToPlane: 1
-    rings: 10
-    focus: 0
-    focusStr: 50
-    randomRings: 50
-    rays: 10
-    randomRays: 0
-    twist: 0
-  custom:
-    source: 4
-    useAs: 12
-    amount: 100
-    radius: 1
-    enable: 1
-    size: 0.05
-    transforms: []
-    vector3: []
-    noPoints: 0
-    outputPoints: []
-    inBoundPoints: []
-    outBoundPoints: []
-  mirrored:
-    amount: 50
-    planeType: 0
-    noPoints: 0
-  slice:
-    plane: 1
-    sliceList: []
-  bricks:
-    amountType: 0
-    mult: 1
-    amount_X: 3
-    amount_Y: 6
-    amount_Z: 0
-    size_Lock: 0
-    size_X: 1
-    size_Y: 1
-    size_Z: 1
-    sizeVar_X: 0
-    sizeVar_Y: 0
-    sizeVar_Z: 0
-    offset_X: 0.5
-    offset_Y: 0.5
-    offset_Z: 0
-    split_X: 0
-    split_Y: 0
-    split_Z: 0
-    split_probability: 0
-    split_offset: 0.5
-    split_rotation: 30
-  voxels:
-    size: 1
-  tets:
-    lattice: 0
-    density: 7
-    noise: 100
-  mode: 1
-  material:
-    innerMaterial: {fileID: 2100000, guid: 134ed67dabbb69e4eb9c3f6a0eb1d5a7, type: 2}
-    mappingScale: 0.1
-    outerMaterial: {fileID: 0}
-    needNewMat: 0
-  clusters:
-    enable: 0
-    count: 10
-    seed: 1
-    relax: 0.5
-    amount: 0
-    layers: 0
-    scale: 1
-    min: 1
-    max: 3
-  advanced:
-    seed: 0
-    decompose: 1
-    removeCollinear: 0
-    copyComponents: 0
-    postWeld: 0
-    smooth: 0
-    inputPrecap: 1
-    outputPrecap: 0
-    removeDoubleFaces: 1
-    elementSizeThreshold: 5
-    combineChildren: 0
-    inner: 0
-    planar: 0
-    relativeSize: 4
-    absoluteSize: 0.1
-    sizeLimitation: 0
-    sizeAmount: 5
-    vertexLimitation: 0
-    vertexAmount: 300
-    triangleLimitation: 0
-    triangleAmount: 300
-  export:
-    source: 0
-    suffix: _frags
-  showCenter: 0
-  centerPosition: {x: 0, y: 0.5798425, z: 0}
-  centerDirection: {x: 0, y: 0, z: 0, w: 1}
-  transForm: {fileID: 1465350203566126354}
-  meshFilter: {fileID: 1454225708644040306}
-  meshRenderer: {fileID: 1443894216599002492}
-  skinnedMeshRend: {fileID: 0}
-  meshFilters: []
-  meshes: []
-  pivots: []
-  rootChildList:
-  - {fileID: 0}
-  fragmentsAll:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  fragmentsLast:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  origSubMeshIdsRF: []
-  materials:
-  - {fileID: 2100000, guid: fdf18c58b725a2f469593ece1786d307, type: 2}
-  shatterMode: 1
-  colorPreview: 0
-  scalePreview: 1
-  previewScale: 0
-  size: 1.7301997
-  rescaleFix: 1
-  originalScale: {x: 1, y: 1, z: 1}
-  bound:
-    m_Center: {x: 1.956, y: 2.1888423, z: 1.8983617}
-    m_Extent: {x: 0.4539718, y: 0.5798422, z: 0.4539718}
-  resetState: 0
+  m_Mesh: {fileID: 43562500845180756, guid: 8d298974da8f23a438cdcdcf3afe3390, type: 2}
