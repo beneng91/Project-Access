@@ -44,10 +44,10 @@ public class ObjectTrigger : MonoBehaviour
     private void TriggerObject()
     {
         Vector3 fwd = raycastObject.transform.TransformDirection(Vector3.forward);
-        Debug.DrawRay(raycastObject.transform.position, fwd * 5, Color.green);
+        Debug.DrawRay(raycastObject.transform.position, fwd * 1.5f, Color.green);
         RaycastHit objectHit;
         
-        if (Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 5))
+        if (Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 1.5f))
         {
             if (objectHit.collider.gameObject.layer == layerBDestroy) //Destroy barrel, nothing else
             {
