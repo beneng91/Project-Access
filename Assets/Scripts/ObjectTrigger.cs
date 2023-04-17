@@ -11,7 +11,7 @@ public class ObjectTrigger : MonoBehaviour
     public GameObject keyDoor;
     public GameObject destroyedBarrel;
     public GameObject destroyedCrate;
-    public GameObject heldAxe;
+    public GameObject heldWeapon;
     private int layerBDestroy;
     private int layerBKeyDestroy;
     private int layerCDestroy;
@@ -96,7 +96,7 @@ public class ObjectTrigger : MonoBehaviour
                 Debug.Log("Key Triggered");
                 keyAcquired = true;
                 keyItem.SetActive(false);
-                heldAxe.SetActive(true);
+                heldWeapon.SetActive(true);
             }
 
             if (objectHit.collider.gameObject.layer == layerInteractable)
