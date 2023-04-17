@@ -8,7 +8,7 @@ public class ObjectTrigger : MonoBehaviour
     public KeyCode triggerObject;
     public GameObject raycastObject;
     public GameObject keyItem;
-    public GameObject keyInteractable;
+    public GameObject keyDoor;
     public GameObject destroyedBarrel;
     public GameObject destroyedCrate;
     public GameObject heldAxe;
@@ -107,7 +107,7 @@ public class ObjectTrigger : MonoBehaviour
                     Debug.Log("Key Interactable Triggered");
                     //objectHit.collider.gameObject.GetComponent<Animator>();
                     //or
-                    keyInteractable.SetActive(false);
+                    keyDoor.SetActive(false);
                 }
             }
         }
