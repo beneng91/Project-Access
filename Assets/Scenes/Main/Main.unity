@@ -830,6 +830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 425727025609021145, guid: c620aecc0ab9df245b49ac38a39b3304, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c620aecc0ab9df245b49ac38a39b3304, type: 3}
 --- !u!1001 &46557307
@@ -3286,15 +3290,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4689795308726824663, guid: e9cea46f861b72e43baf36c276f8fc1a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.92
+      value: -2.912
       objectReference: {fileID: 0}
     - target: {fileID: 4689795308726824663, guid: e9cea46f861b72e43baf36c276f8fc1a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.484
+      value: 3.545
       objectReference: {fileID: 0}
     - target: {fileID: 4689795308726824663, guid: e9cea46f861b72e43baf36c276f8fc1a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.047
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 4689795308726824663, guid: e9cea46f861b72e43baf36c276f8fc1a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15969,6 +15973,14 @@ PrefabInstance:
     - target: {fileID: 137439963624216856, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
       propertyPath: m_ReflectionProbeUsage
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614673990656034404, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614673990656034404, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6671875460297743242, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
       propertyPath: orthographic
