@@ -9,6 +9,7 @@ public class ObjectTrigger : MonoBehaviour
     public GameObject raycastObject;
     public GameObject keyItem;
     public GameObject keyInteractable;
+    public GameObject destroyedBarrel;
     //public GameObject playerPos;
     private int layerDestructible;
     private int layerKey;
@@ -40,13 +41,15 @@ public class ObjectTrigger : MonoBehaviour
         Vector3 fwd = raycastObject.transform.TransformDirection(Vector3.forward);
         Debug.DrawRay(raycastObject.transform.position, fwd * 5, Color.green);
         RaycastHit objectHit;
+        
         if (Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 5))
         {
             if (objectHit.collider.gameObject.layer == layerDestructible)
             {
                 Debug.Log("Destructible Triggered");
-                //Play Animation
-                //objectHit.collider.gameObject.GetComponent<Animator>();
+                //Trigger destroyed barrel
+                Instantiate(destroyedBarrel, objectHit.transform.position, objectHit.transform.rotation);
+                objectHit.collider.gameObject.SetActive(false);
 
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
@@ -54,7 +57,10 @@ public class ObjectTrigger : MonoBehaviour
             if (objectHit.collider.gameObject.layer == layerKeyDestructible)
             {
                 Debug.Log("Key Destructible Triggered");
-                //objectHit.collider.gameObject.GetComponent<Animator>();
+                //Trigger destroyed barrel
+                Instantiate(destroyedBarrel, objectHit.transform.position, objectHit.transform.rotation);
+                objectHit.collider.gameObject.SetActive(false);
+
                 keyItem.SetActive(true);
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
