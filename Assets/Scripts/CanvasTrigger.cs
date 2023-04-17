@@ -42,32 +42,40 @@ public class CanvasTrigger : MonoBehaviour
         {
             if (objectHit.collider.gameObject.layer == layerBDestroy) //Destroy barrel, nothing else
             {
+                Debug.Log("Hit");
                 clearE.SetActive(true);
             }
             else if (objectHit.collider.gameObject.layer == layerBKeyDestroy) //Destroy barrel, spawn key
             {
+                Debug.Log("Hit");
                 clearE.SetActive(true);
             }
             else if (objectHit.collider.gameObject.layer == layerCDestroy) //Destroy crate, nothing else
             {
+                Debug.Log("Hit");
                 clearE.SetActive(true);
             }
             else if (objectHit.collider.gameObject.layer == layerCKeyDestroy) //Destroy crate, spawn key
             {
+                Debug.Log("Hit");
                 clearE.SetActive(true);
             }
             else if (objectHit.collider.gameObject.layer == layerKey)
             {
+                Debug.Log("Hit");
                 clearE.SetActive(true);
             }
             else if (objectHit.collider.gameObject.layer == layerInteractable)
             {
+                Debug.Log("Hit");
                 clearE.SetActive(true);
             }
-            else
-            {
-                clearE.SetActive(false);
-            }
+            
+        }
+        else
+        {
+            Debug.Log("Not Hit");
+            clearE.SetActive(false);
         }
     }
 }
