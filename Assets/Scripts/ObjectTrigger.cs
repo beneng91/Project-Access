@@ -10,19 +10,24 @@ public class ObjectTrigger : MonoBehaviour
     public GameObject keyItem;
     public GameObject keyInteractable;
     public GameObject destroyedBarrel;
-    //public GameObject playerPos;
-    private int layerDestructible;
+    public GameObject destroyedCrate;
+    public GameObject heldAxe;
+    private int layerBDestroy;
+    private int layerBKeyDestroy;
+    private int layerCDestroy;
+    private int layerCKeyDestroy;
     private int layerKey;
-    private int layerKeyDestructible;
     private int layerInteractable;
     private bool keyAcquired;
 
     // Start is called before the first frame update
     void Start()
     {
-        layerDestructible = LayerMask.NameToLayer("Destructible");
+        layerBDestroy = LayerMask.NameToLayer("BDestroy");
+        layerBKeyDestroy = LayerMask.NameToLayer("BKeyDestroy");
+        layerCDestroy = LayerMask.NameToLayer("CDestroy");
+        layerCKeyDestroy = LayerMask.NameToLayer("CKeyDestroy");
         layerKey = LayerMask.NameToLayer("Key");
-        layerKeyDestructible = LayerMask.NameToLayer("KeyDestructible");
         layerInteractable = LayerMask.NameToLayer("Interactable");
         keyAcquired = false;
     }
@@ -44,7 +49,7 @@ public class ObjectTrigger : MonoBehaviour
         
         if (Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 5))
         {
-            if (objectHit.collider.gameObject.layer == layerDestructible)
+            if (objectHit.collider.gameObject.layer == layerBDestroy) //Destroy barrel, nothing else
             {
                 Debug.Log("Destructible Triggered");
                 //Trigger destroyed barrel
@@ -54,11 +59,32 @@ public class ObjectTrigger : MonoBehaviour
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
 
-            if (objectHit.collider.gameObject.layer == layerKeyDestructible)
+            if (objectHit.collider.gameObject.layer == layerBKeyDestroy) //Destroy barrel, spawn key
             {
                 Debug.Log("Key Destructible Triggered");
                 //Trigger destroyed barrel
                 Instantiate(destroyedBarrel, objectHit.transform.position, objectHit.transform.rotation);
+                objectHit.collider.gameObject.SetActive(false);
+
+                keyItem.SetActive(true);
+                objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+            }
+
+            if (objectHit.collider.gameObject.layer == layerCDestroy) //Destroy crate, nothing else
+            {
+                Debug.Log("Destructible Triggered");
+                //Trigger destroyed crate
+                Instantiate(destroyedCrate, objectHit.transform.position, objectHit.transform.rotation);
+                objectHit.collider.gameObject.SetActive(false);
+
+                objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+            }
+
+            if (objectHit.collider.gameObject.layer == layerCKeyDestroy) //Destroy crate, spawn key
+            {
+                Debug.Log("Key Destructible Triggered");
+                //Trigger destroyed crate
+                Instantiate(destroyedCrate, objectHit.transform.position, objectHit.transform.rotation);
                 objectHit.collider.gameObject.SetActive(false);
 
                 keyItem.SetActive(true);
@@ -70,6 +96,7 @@ public class ObjectTrigger : MonoBehaviour
                 Debug.Log("Key Triggered");
                 keyAcquired = true;
                 keyItem.SetActive(false);
+                heldAxe.SetActive(true);
             }
 
             if (objectHit.collider.gameObject.layer == layerInteractable)

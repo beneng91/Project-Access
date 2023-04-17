@@ -11,12 +11,12 @@ TagManager:
   - postprocessing
   - Water
   - UI
-  - Destructible
+  - BDestroy
   - Interactable
-  - KeyDestructible
+  - BKeyDestroy
   - Key
-  - 
-  - 
+  - CDestroy
+  - CKeyDestroy
   - 
   - 
   - 

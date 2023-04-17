@@ -132,6 +132,7 @@ PlayableDirector:
   m_SceneBindings: []
   m_ExposedReferences:
     m_References:
+    - 5cd897d4d9ae61b448546440cb9016ab: {fileID: 8786143445597541699}
     - be4848954c935bd438a2d0b4438778e1: {fileID: 8786143445597541699}
 --- !u!1 &2810053549927634021
 GameObject:
