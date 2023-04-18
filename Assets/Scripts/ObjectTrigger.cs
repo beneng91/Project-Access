@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ObjectTrigger : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class ObjectTrigger : MonoBehaviour
     private int layerKey;
     private int layerInteractable;
     private bool keyAcquired;
+
+    //sound stuff
+    public AudioClip[] audioSound;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +61,10 @@ public class ObjectTrigger : MonoBehaviour
                 Instantiate(destroyedBarrel, objectHit.transform.position, objectHit.transform.rotation);
                 objectHit.collider.gameObject.SetActive(false);
 
+                //sound stuff
+                audioSource.clip = audioSound[Random.Range(0, 2)];
+                audioSource.PlayOneShot(audioSource.clip);
+
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
 
@@ -65,6 +74,10 @@ public class ObjectTrigger : MonoBehaviour
                 //Trigger destroyed barrel
                 Instantiate(destroyedBarrel, objectHit.transform.position, objectHit.transform.rotation);
                 objectHit.collider.gameObject.SetActive(false);
+
+                //sound stuff
+                audioSource.clip = audioSound[4];
+                audioSource.PlayOneShot(audioSource.clip);
 
                 keyItem.SetActive(true);
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
@@ -76,6 +89,10 @@ public class ObjectTrigger : MonoBehaviour
                 //Trigger destroyed crate
                 Instantiate(destroyedCrate, objectHit.transform.position, objectHit.transform.rotation);
                 objectHit.collider.gameObject.SetActive(false);
+
+                //sound stuff
+                audioSource.clip = audioSound[Random.Range(2, 4)];
+                audioSource.PlayOneShot(audioSource.clip);
 
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
