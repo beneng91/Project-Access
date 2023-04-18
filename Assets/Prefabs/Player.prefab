@@ -2705,8 +2705,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionObject: {fileID: 7758761165404140342}
   audioSound:
-  - {fileID: 8300000, guid: d824bf241a5c0304383312271bb7b156, type: 3}
-  - {fileID: 8300000, guid: fd10e2368f6f7984c93fd1d2945a5535, type: 3}
+  - {fileID: 8300000, guid: 53e646c7032b7ba42bbcb4689a9388d6, type: 3}
+  - {fileID: 8300000, guid: 3da86aa238e401d4c930ceadbcc58972, type: 3}
   - {fileID: 8300000, guid: fa84d75cab027b549b219e523ef98546, type: 3}
   audioSource: {fileID: 527576810}
 --- !u!82 &527576810
