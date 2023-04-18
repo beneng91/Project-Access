@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharacterAnimation : MonoBehaviour
 {
+    [SerializeField] Transform hand;
+
     private Animator animator;
     private UnityEngine.CharacterController controller;
     private Vector3 moveDirection = Vector3.zero;
@@ -51,6 +53,7 @@ public class CharacterAnimation : MonoBehaviour
         if (chainsaw.activeSelf)
         {
             animator.runtimeAnimatorController = chainsawArmed as RuntimeAnimatorController;
+            transform.SetParent(hand);
         }
     }
 }
