@@ -9,6 +9,10 @@ public class GroundDetection : MonoBehaviour
     private int layerGrass;
     private int layerWood;
     private bool isWalking;
+    private bool concreteTriggered = false;
+    private bool grassTriggered = false;
+    private bool woodTriggered = false;
+
 
     //Sound stuff
     public AudioClip[] audioSound;
@@ -18,6 +22,7 @@ public class GroundDetection : MonoBehaviour
     {
         isWalking = false;
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,17 +34,25 @@ public class GroundDetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DetectGround();
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
-            isWalking = true;
+            if (isWalking == false)
+            {
+                isWalking = true;
+                audioSource.Play();
+            }
+            
         }
         else
         {
-            isWalking = false;
-            //audioSource.Stop();
+            if (isWalking == true)
+            {
+                isWalking = false;
+                audioSource.Stop();
+            }
+            
         }
-        DetectGround();
-        
     }
 
     private void DetectGround()
@@ -47,48 +60,50 @@ public class GroundDetection : MonoBehaviour
         RaycastHit objectHit;
         if (Physics.Raycast(detectionObject.transform.position, Vector3.down, out objectHit, 1f))
         {
-            if (objectHit.collider.gameObject.layer == layerConcrete) //Concrete layer
-            {   
-                if (isWalking == true)
+            if (objectHit.collider.gameObject.layer == layerConcrete && concreteTriggered == false) //Concrete layer
+            {
+                concreteTriggered = true;
+                if (audioSource.clip != audioSound[0])
                 {
                     audioSource.clip = audioSound[0];
-                    audioSource.Play();
+                    if (isWalking == true)
+                    {
+                        audioSource.Play();
+                    }
                 }
-                else
-                {
-                    audioSource.Stop();
-                }
+                grassTriggered = false;
+                woodTriggered = false;
             }
-
-            if (objectHit.collider.gameObject.layer == layerGrass) //Grass layer
+            
+            if (objectHit.collider.gameObject.layer == layerGrass && grassTriggered == false) //Grass layer
             {
-                if (isWalking == true)
+                grassTriggered = true;
+                if (audioSource.clip != audioSound[1])
                 {
                     audioSource.clip = audioSound[1];
-                    audioSource.Play();
+                    if (isWalking == true)
+                    {
+                        audioSource.Play();
+                    }
                 }
-                else
-                {
-                    audioSource.Stop();
-                }
+                concreteTriggered = false;
+                woodTriggered = false;
             }
-
-            if (objectHit.collider.gameObject.layer == layerWood) //Wood layer
+            
+            if (objectHit.collider.gameObject.layer == layerWood && woodTriggered == false) //Wood layer
             {
-                if (isWalking == true)
+                woodTriggered = true;
+                if (audioSource.clip != audioSound[2])
                 {
                     audioSource.clip = audioSound[2];
-                    audioSource.Play();
+                    if (isWalking == true)
+                    {
+                        audioSource.Play();
+                    }
                 }
-                else
-                {
-                    audioSource.Stop();
-                }
+                concreteTriggered = false;
+                grassTriggered = false;
             }
-        }
-        else
-        {
-            Debug.Log("Not Hit");
         }
     }
 }
