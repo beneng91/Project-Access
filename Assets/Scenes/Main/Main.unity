@@ -9118,7 +9118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7bee09015fb17f43ac702786c99620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 30
   audioSound:
   - {fileID: 8300000, guid: 00774f91f937308458d19503860a218a, type: 3}
   audioSource: {fileID: 888970849}
@@ -16637,6 +16637,14 @@ PrefabInstance:
       propertyPath: keyItem
       value: 
       objectReference: {fileID: 517390507}
+    - target: {fileID: 8208713321595621590, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: audioSound.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 53e646c7032b7ba42bbcb4689a9388d6, type: 3}
+    - target: {fileID: 8208713321595621590, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: audioSound.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3da86aa238e401d4c930ceadbcc58972, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
 --- !u!1001 &1763971974
