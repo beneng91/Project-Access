@@ -10,6 +10,10 @@ public class GroundDetection : MonoBehaviour
     private int layerWood;
     private bool isWalking;
 
+    //Sound stuff
+    public AudioClip[] audioSound;
+    public AudioSource audioSource;
+
     private void Awake()
     {
         isWalking = false;
@@ -32,6 +36,7 @@ public class GroundDetection : MonoBehaviour
         else
         {
             isWalking = false;
+            //audioSource.Stop();
         }
         DetectGround();
         
@@ -46,7 +51,12 @@ public class GroundDetection : MonoBehaviour
             {   
                 if (isWalking == true)
                 {
-                    //play audio here
+                    audioSource.clip = audioSound[0];
+                    audioSource.Play();
+                }
+                else
+                {
+                    audioSource.Stop();
                 }
             }
 
@@ -54,7 +64,12 @@ public class GroundDetection : MonoBehaviour
             {
                 if (isWalking == true)
                 {
-                    //play audio here
+                    audioSource.clip = audioSound[1];
+                    audioSource.Play();
+                }
+                else
+                {
+                    audioSource.Stop();
                 }
             }
 
@@ -62,7 +77,12 @@ public class GroundDetection : MonoBehaviour
             {
                 if (isWalking == true)
                 {
-                    //play audio here
+                    audioSource.clip = audioSound[2];
+                    audioSource.Play();
+                }
+                else
+                {
+                    audioSource.Stop();
                 }
             }
         }
