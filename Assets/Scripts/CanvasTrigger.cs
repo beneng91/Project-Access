@@ -14,6 +14,8 @@ public class CanvasTrigger : MonoBehaviour
     private int layerKey;
     private int layerInteractable;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
