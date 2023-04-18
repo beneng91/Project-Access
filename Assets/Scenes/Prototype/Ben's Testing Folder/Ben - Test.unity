@@ -243,6 +243,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 820622043, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: unarmed
+      value: 
+      objectReference: {fileID: 9100000, guid: 87cae8ba7274e6b4cba1802182ec7128, type: 2}
+    - target: {fileID: 820622043, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: chainsawArmed
+      value: 
+      objectReference: {fileID: 9100000, guid: 246eb16943b0a6e44bf20b70cce84cf6, type: 2}
     - target: {fileID: 1350103588185370, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1427,6 +1435,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.025429256
       objectReference: {fileID: 0}
+    - target: {fileID: 95365376127056996, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 95365376127056996, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 246eb16943b0a6e44bf20b70cce84cf6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
 --- !u!1 &1382254360

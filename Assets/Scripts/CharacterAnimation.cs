@@ -8,6 +8,11 @@ public class CharacterAnimation : MonoBehaviour
     private UnityEngine.CharacterController controller;
     private Vector3 moveDirection = Vector3.zero;
 
+    public GameObject chainsaw;
+
+    public RuntimeAnimatorController unarmed;
+    public RuntimeAnimatorController chainsawArmed;
+
     public float speed = 10f;
 
 
@@ -42,5 +47,10 @@ public class CharacterAnimation : MonoBehaviour
 
         // Update the animator with the movement state
         animator.SetBool("IsMoving", isMoving);
+
+        if (chainsaw.activeSelf)
+        {
+            animator.runtimeAnimatorController = chainsawArmed as RuntimeAnimatorController;
+        }
     }
 }
