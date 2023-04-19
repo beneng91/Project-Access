@@ -28,6 +28,11 @@ public class ObjectTrigger : MonoBehaviour
     //animation stuff
     public Animator animator;
 
+    //cooldown stuff
+    public bool attackCooldown;
+    public float attackCooldownTimer;
+    private float attackTimer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +52,18 @@ public class ObjectTrigger : MonoBehaviour
         {
             TriggerObject();
         }
+
+        if (attackCooldown == true)
+        {
+            attackTimer -= Time.deltaTime;
+
+            if (attackTimer <= 0)
+            {
+                attackCooldown = false;
+                attackTimer = attackCooldownTimer;
+            }
+
+        }
     }
 
     private void TriggerObject()
@@ -57,7 +74,7 @@ public class ObjectTrigger : MonoBehaviour
         
         if (Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 1.5f))
         {
-            if (objectHit.collider.gameObject.layer == layerBDestroy) //Destroy barrel, nothing else
+            if (objectHit.collider.gameObject.layer == layerBDestroy && attackCooldown == false) //Destroy barrel, nothing else
             {
                 Debug.Log("Destructible Triggered");
                 //Trigger destroyed barrel
@@ -71,10 +88,13 @@ public class ObjectTrigger : MonoBehaviour
                 //animation stuff
                 animator.SetTrigger("Attack");
 
+                //cooldown stuff
+                attackCooldown = true;
+
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
 
-            if (objectHit.collider.gameObject.layer == layerBKeyDestroy) //Destroy barrel, spawn key
+            if (objectHit.collider.gameObject.layer == layerBKeyDestroy && attackCooldown == false) //Destroy barrel, spawn key
             {
                 Debug.Log("Key Destructible Triggered");
                 //Trigger destroyed barrel
@@ -88,11 +108,14 @@ public class ObjectTrigger : MonoBehaviour
                 //animation stuff
                 animator.SetTrigger("Attack");
 
+                //cooldown stuff
+                attackCooldown = true;
+
                 keyItem.SetActive(true);
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
 
-            if (objectHit.collider.gameObject.layer == layerCDestroy) //Destroy crate, nothing else
+            if (objectHit.collider.gameObject.layer == layerCDestroy && attackCooldown == false) //Destroy crate, nothing else
             {
                 Debug.Log("Destructible Triggered");
                 //Trigger destroyed crate
@@ -105,6 +128,9 @@ public class ObjectTrigger : MonoBehaviour
 
                 //animation stuff
                 animator.SetTrigger("Attack");
+
+                //cooldown stuff
+                attackCooldown = true;
 
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
