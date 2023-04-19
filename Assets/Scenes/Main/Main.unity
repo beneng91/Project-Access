@@ -17607,6 +17607,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1762940550}
+    - target: {fileID: 7392700235659194417, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: attackCooldownTimer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2110079014627417087, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
