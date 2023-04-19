@@ -10,6 +10,7 @@ public class DialogueLoop : MonoBehaviour
     public AudioClip[] audioSound;
     public AudioSource audioSource;
 
+    public GameObject keyItem;
 
     private void Start()
     {
@@ -26,6 +27,11 @@ public class DialogueLoop : MonoBehaviour
             audioSource.clip = audioSound[0];
             audioSource.PlayOneShot(audioSource.clip);
             timers = timer;
+        }
+
+        if (keyItem.activeSelf)
+        {
+            Destroy(gameObject);
         }
     }
 }

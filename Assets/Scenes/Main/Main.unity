@@ -9308,6 +9308,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4454848413584198, guid: 56cd170081ba60048994f8d31d86724b, type: 3}
   m_PrefabInstance: {fileID: 1533270836}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &855257238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5469977468266317057, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+  m_PrefabInstance: {fileID: 1762940549}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &867371341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9680,6 +9685,7 @@ MonoBehaviour:
   audioSound:
   - {fileID: 8300000, guid: 00774f91f937308458d19503860a218a, type: 3}
   audioSource: {fileID: 888970849}
+  keyItem: {fileID: 855257238}
 --- !u!4 &891737028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4454848413584198, guid: 56cd170081ba60048994f8d31d86724b, type: 3}
@@ -17581,6 +17587,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5469977468266317057, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7392700235659194417, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
       propertyPath: keyDoor
       value: 
@@ -17593,7 +17603,8 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1762940550}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2110079014627417087, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
 --- !u!95 &1762940550 stripped
 Animator:
