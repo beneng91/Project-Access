@@ -17531,6 +17531,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 820622043, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: chainsawArmed
+      value: 
+      objectReference: {fileID: 9100000, guid: 1f6961e0bba89ac4ba73ef50b264af26, type: 2}
     - target: {fileID: 833145660, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
       propertyPath: clearE
       value: 
