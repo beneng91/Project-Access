@@ -16581,6 +16581,10 @@ PrefabInstance:
       propertyPath: clearE
       value: 
       objectReference: {fileID: 648337153}
+    - target: {fileID: 833145660, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1762940550}
     - target: {fileID: 1350103588185370, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -16637,8 +16641,17 @@ PrefabInstance:
       propertyPath: keyItem
       value: 
       objectReference: {fileID: 517390507}
+    - target: {fileID: 7392700235659194417, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1762940550}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+--- !u!95 &1762940550 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95365376127056996, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+  m_PrefabInstance: {fileID: 1762940549}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1763971974
 PrefabInstance:
   m_ObjectHideFlags: 0
