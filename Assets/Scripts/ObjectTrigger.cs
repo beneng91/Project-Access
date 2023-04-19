@@ -25,6 +25,9 @@ public class ObjectTrigger : MonoBehaviour
     public AudioClip[] audioSound;
     public AudioSource audioSource;
 
+    //animation stuff
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +67,9 @@ public class ObjectTrigger : MonoBehaviour
                 //sound stuff
                 audioSource.clip = audioSound[Random.Range(0, 2)];
                 audioSource.PlayOneShot(audioSource.clip);
+
+                //animation stuff
+                animator.SetTrigger("Attack");
 
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
