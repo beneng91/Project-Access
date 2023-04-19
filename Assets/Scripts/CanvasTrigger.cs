@@ -14,7 +14,8 @@ public class CanvasTrigger : MonoBehaviour
     private int layerKey;
     private int layerInteractable;
 
-
+    //Interact animation stuff
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,9 @@ public class CanvasTrigger : MonoBehaviour
         layerCKeyDestroy = LayerMask.NameToLayer("CKeyDestroy");
         layerKey = LayerMask.NameToLayer("Key");
         layerInteractable = LayerMask.NameToLayer("Interactable");
+
+
+
 
     }
 
@@ -46,21 +50,37 @@ public class CanvasTrigger : MonoBehaviour
             {
                 //Debug.Log("Hit");
                 clearE.SetActive(true);
+
+                //Animation
+                bool isLooking = true;
+                animator.SetBool("IsLooking", isLooking);
             }
             else if (objectHit.collider.gameObject.layer == layerBKeyDestroy) //Destroy barrel, spawn key
             {
                 //Debug.Log("Hit");
                 clearE.SetActive(true);
+
+                //Animation
+                bool isLooking = true;
+                animator.SetBool("IsLooking", isLooking);
             }
             else if (objectHit.collider.gameObject.layer == layerCDestroy) //Destroy crate, nothing else
             {
                 //Debug.Log("Hit");
                 clearE.SetActive(true);
+
+                //Animation
+                bool isLooking = true;
+                animator.SetBool("IsLooking", isLooking);
             }
             else if (objectHit.collider.gameObject.layer == layerCKeyDestroy) //Destroy crate, spawn key
             {
                 //Debug.Log("Hit");
                 clearE.SetActive(true);
+
+                //Animation
+                bool isLooking = true;
+                animator.SetBool("IsLooking", isLooking);
             }
             else if (objectHit.collider.gameObject.layer == layerKey)
             {
@@ -78,6 +98,9 @@ public class CanvasTrigger : MonoBehaviour
         {
             //Debug.Log("Not Hit");
             clearE.SetActive(false);
+
+            //Animation
+            animator.SetBool("IsLooking", false);
         }
     }
 }
