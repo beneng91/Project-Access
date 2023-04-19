@@ -85,6 +85,9 @@ public class ObjectTrigger : MonoBehaviour
                 audioSource.clip = audioSound[4];
                 audioSource.PlayOneShot(audioSource.clip);
 
+                //animation stuff
+                animator.SetTrigger("Attack");
+
                 keyItem.SetActive(true);
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
@@ -99,6 +102,9 @@ public class ObjectTrigger : MonoBehaviour
                 //sound stuff
                 audioSource.clip = audioSound[Random.Range(2, 4)];
                 audioSource.PlayOneShot(audioSource.clip);
+
+                //animation stuff
+                animator.SetTrigger("Attack");
 
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
