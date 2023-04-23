@@ -17611,6 +17611,14 @@ PrefabInstance:
       propertyPath: attackCooldownTimer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7392700235659194417, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: audioSound.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392700235659194417, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
+      propertyPath: audioSound.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: e0bfae14f270efa45821104be73a9584, type: 3}
     m_RemovedComponents:
     - {fileID: 2110079014627417087, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 871297581ceb2724c87e3fbf8ce7e4e7, type: 3}
@@ -20290,7 +20298,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: b6bade6e1ea180544ba1f3da32870a28, type: 2}
-  m_audioClip: {fileID: 8300000, guid: f263a9274010f5d44bc4eb4eee234066, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1409dde0dd4c80044af808fdcf55a1e4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

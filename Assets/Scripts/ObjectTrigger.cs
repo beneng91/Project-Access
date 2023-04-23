@@ -61,6 +61,7 @@ public class ObjectTrigger : MonoBehaviour
             {
                 attackCooldown = false;
                 attackTimer = attackCooldownTimer;
+                animator.ResetTrigger("Attack");
             }
 
         }
@@ -87,6 +88,7 @@ public class ObjectTrigger : MonoBehaviour
 
                 //animation stuff
                 animator.SetTrigger("Attack");
+
 
                 //cooldown stuff
                 attackCooldown = true;
@@ -163,6 +165,8 @@ public class ObjectTrigger : MonoBehaviour
                     //objectHit.collider.gameObject.GetComponent<Animator>();
                     //or
                     keyDoor.SetActive(false);
+                    audioSource.clip = audioSound[5];
+                    audioSource.PlayOneShot(audioSource.clip);
                 }
             }
         }
