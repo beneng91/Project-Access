@@ -43,6 +43,9 @@ public class ObjectTrigger : MonoBehaviour
         layerKey = LayerMask.NameToLayer("Key");
         layerInteractable = LayerMask.NameToLayer("Interactable");
         keyAcquired = false;
+
+        //bug fixing?
+        attackTimer = attackCooldownTimer;
     }
 
     // Update is called once per frame
