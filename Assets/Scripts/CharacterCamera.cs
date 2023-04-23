@@ -17,6 +17,7 @@ public class CharacterCamera : MonoBehaviour
     void Start()
     {
         cameraTransform = transform.GetChild(0);
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
