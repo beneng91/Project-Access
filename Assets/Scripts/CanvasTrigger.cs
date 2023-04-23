@@ -13,6 +13,7 @@ public class CanvasTrigger : MonoBehaviour
     private int layerCKeyDestroy;
     private int layerKey;
     private int layerInteractable;
+    private bool keyAcquired;
 
     //Interact animation stuff
     public Animator animator;
@@ -86,8 +87,12 @@ public class CanvasTrigger : MonoBehaviour
             {
                 //Debug.Log("Hit");
                 clearE.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    keyAcquired = true;
+                }
             }
-            else if (objectHit.collider.gameObject.layer == layerInteractable)
+            else if (objectHit.collider.gameObject.layer == layerInteractable && keyAcquired == true)
             {
                 //Debug.Log("Hit");
                 clearE.SetActive(true);
