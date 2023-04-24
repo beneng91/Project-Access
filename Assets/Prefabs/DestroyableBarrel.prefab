@@ -99,25 +99,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4328919645808007423, guid: e07265e26ba95a74c810a312934e60e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 6322863117736234027, guid: e07265e26ba95a74c810a312934e60e3, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 6864825013235082960, guid: e07265e26ba95a74c810a312934e60e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 7019201783283921306, guid: e07265e26ba95a74c810a312934e60e3, type: 3}
       propertyPath: m_Name
       value: AN_barrel
-      objectReference: {fileID: 0}
-    - target: {fileID: 8255557742002180110, guid: e07265e26ba95a74c810a312934e60e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e07265e26ba95a74c810a312934e60e3, type: 3}

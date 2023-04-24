@@ -54,9 +54,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4347777339695288484}
     m_Modifications:
+    - target: {fileID: 24580159346988379, guid: d9c55ca084f31cf4a81a34258a39b248, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 865781836179793260, guid: d9c55ca084f31cf4a81a34258a39b248, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2471051331727217509, guid: d9c55ca084f31cf4a81a34258a39b248, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810053549927634021, guid: d9c55ca084f31cf4a81a34258a39b248, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4215418519359284367, guid: d9c55ca084f31cf4a81a34258a39b248, type: 3}
       propertyPath: m_Name

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4328919645808007422}
   - component: {fileID: 4328919645808007421}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: New Timeline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6857956090207825042}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: surfaceShatterSetSolved
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2402530779496672570}
   - component: {fileID: 3206673872363732570}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: AN_barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 8925115963485450075}
   - component: {fileID: 6322863117736234027}
   - component: {fileID: 4538978442826372921}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: surfaceShatterSetShape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
