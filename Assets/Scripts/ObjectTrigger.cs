@@ -78,6 +78,7 @@ public class ObjectTrigger : MonoBehaviour
         {
             if (objectHit.collider.gameObject.layer == layerBDestroy && attackCooldown == false) //Destroy barrel, nothing else
             {
+                objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
                 Debug.Log("Destructible Triggered");
                 //Trigger destroyed barrel
                 objectHit.transform.GetChild(1).gameObject.SetActive(true);
@@ -90,16 +91,13 @@ public class ObjectTrigger : MonoBehaviour
                 //animation stuff
                 animator.SetTrigger("Attack");
 
-
                 //cooldown stuff
-                attackCooldown = true;
-
-                objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
-                
+                attackCooldown = true;               
             }
 
             if (objectHit.collider.gameObject.layer == layerBKeyDestroy && attackCooldown == false) //Destroy barrel, spawn key
             {
+                objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
                 Debug.Log("Key Destructible Triggered");
                 //Trigger destroyed barrel
                 objectHit.transform.GetChild(0).gameObject.SetActive(false);
@@ -117,11 +115,11 @@ public class ObjectTrigger : MonoBehaviour
                 attackCooldown = true;
 
                 keyItem.SetActive(true);
-                objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
 
             if (objectHit.collider.gameObject.layer == layerCDestroy && attackCooldown == false) //Destroy crate, nothing else
             {
+                objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
                 Debug.Log("Destructible Triggered");
                 //Trigger destroyed crate
                 objectHit.transform.GetChild(1).gameObject.SetActive(true);
@@ -136,19 +134,17 @@ public class ObjectTrigger : MonoBehaviour
 
                 //cooldown stuff
                 attackCooldown = true;
-
-                objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
 
             if (objectHit.collider.gameObject.layer == layerCKeyDestroy) //Destroy crate, spawn key
             {
+                objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
                 Debug.Log("Key Destructible Triggered");
                 //Trigger destroyed crate
                 objectHit.transform.GetChild(1).gameObject.SetActive(true);
                 objectHit.transform.GetChild(0).gameObject.SetActive(false);
 
                 keyItem.SetActive(true);
-                objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             }
 
             if (objectHit.collider.gameObject.layer == layerKey)
