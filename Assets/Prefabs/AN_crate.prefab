@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8645756140574494151}
   - component: {fileID: 2471051331727217509}
   - component: {fileID: 280932245972518442}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: surfaceShatterSetShape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4085777945184345472}
   - component: {fileID: 6861330699842820453}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrateDestruction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8994320043312204694}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: surfaceShatterSetSolved
   m_TagString: Untagged
   m_Icon: {fileID: 0}

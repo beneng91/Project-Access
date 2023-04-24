@@ -95,14 +95,16 @@ public class ObjectTrigger : MonoBehaviour
                 attackCooldown = true;
 
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+                
             }
 
             if (objectHit.collider.gameObject.layer == layerBKeyDestroy && attackCooldown == false) //Destroy barrel, spawn key
             {
                 Debug.Log("Key Destructible Triggered");
                 //Trigger destroyed barrel
-                objectHit.transform.GetChild(1).gameObject.SetActive(true);
                 objectHit.transform.GetChild(0).gameObject.SetActive(false);
+                objectHit.transform.GetChild(1).gameObject.SetActive(true);
+                
 
                 //sound stuff
                 audioSource.clip = audioSound[4];
