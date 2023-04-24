@@ -68,11 +68,6 @@ public class ObjectTrigger : MonoBehaviour
         }
     }
 
-    private void DestroyBarrel()
-    {
-        
-    }
-
     private void TriggerObject()
     {
         Vector3 fwd = raycastObject.transform.TransformDirection(Vector3.forward);
