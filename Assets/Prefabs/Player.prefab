@@ -2515,7 +2515,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7124915349637687202}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: 0.2}
+  m_LocalPosition: {x: 0, y: 0.35, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2538,8 +2538,6 @@ MonoBehaviour:
   raycastObject: {fileID: 7124915349637687202}
   keyItem: {fileID: 0}
   keyDoor: {fileID: 0}
-  destroyedBarrel: {fileID: 7019201783283921306, guid: e07265e26ba95a74c810a312934e60e3, type: 3}
-  destroyedCrate: {fileID: 4215418519359284367, guid: d9c55ca084f31cf4a81a34258a39b248, type: 3}
   heldWeapon: {fileID: 5469977468266317057}
   audioSound:
   - {fileID: 8300000, guid: 0bf9bd146a6e9ea4f8e2f8f9015d7ece, type: 3}
@@ -2548,6 +2546,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 51c13c8ad4d3dc24a82c94c3bc85e545, type: 3}
   - {fileID: 8300000, guid: 09bd0dc29505b7c4db9c3a48a875f19c, type: 3}
   audioSource: {fileID: 833145663}
+  animator: {fileID: 0}
+  attackCooldown: 0
+  attackCooldownTimer: 0
 --- !u!82 &833145663
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2658,6 +2659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raycastObject: {fileID: 7124915349637687202}
   clearE: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1 &7758761165404140342
 GameObject:
   m_ObjectHideFlags: 0
