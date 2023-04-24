@@ -14608,8 +14608,8 @@ Transform:
   - {fileID: 1973134699}
   - {fileID: 144663244}
   - {fileID: 1493810707}
-  - {fileID: 948751618}
   - {fileID: 1788868863}
+  - {fileID: 948751618}
   - {fileID: 1650155674}
   - {fileID: 810998094}
   m_Father: {fileID: 177391972}
@@ -20167,6 +20167,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 656339347}
     m_Modifications:
+    - target: {fileID: 2110079014465575004, guid: 7f63460ce8b96d148986ed8ff7406fdc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2110079014465575004, guid: 7f63460ce8b96d148986ed8ff7406fdc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407064346704189318, guid: 7f63460ce8b96d148986ed8ff7406fdc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5469977467613742754, guid: 7f63460ce8b96d148986ed8ff7406fdc, type: 3}
       propertyPath: m_Name
       value: Chainsaw
