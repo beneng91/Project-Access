@@ -168,8 +168,6 @@ public class ObjectTrigger : MonoBehaviour
                 if (keyAcquired == true)
                 {
                     Debug.Log("Key Interactable Triggered");
-                    //objectHit.collider.gameObject.GetComponent<Animator>();
-                    //or
                     keyDoor.SetActive(false);
                     audioSource.clip = audioSound[5];
                     audioSource.PlayOneShot(audioSource.clip);
