@@ -50,6 +50,12 @@ public class CharacterAnimation : MonoBehaviour
         // Update the animator with the movement state
         animator.SetBool("IsMoving", isMoving);
 
+        //Check for animation
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        {
+            controller.Move(Vector3.zero);
+        }
+
         if (chainsaw.activeSelf)
         {
             animator.runtimeAnimatorController = chainsawArmed as RuntimeAnimatorController;
