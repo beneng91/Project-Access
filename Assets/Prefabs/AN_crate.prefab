@@ -176,13 +176,13 @@ GameObject:
   m_Component:
   - component: {fileID: 8219498741456925622}
   - component: {fileID: 8786143445597541699}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AN_crate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8219498741456925622
 Transform:
   m_ObjectHideFlags: 0

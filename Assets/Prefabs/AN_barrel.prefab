@@ -95,13 +95,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2402530779496672570}
   - component: {fileID: 3206673872363732570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AN_barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2402530779496672570
 Transform:
   m_ObjectHideFlags: 0

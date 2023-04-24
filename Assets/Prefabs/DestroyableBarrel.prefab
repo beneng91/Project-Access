@@ -115,14 +115,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AN_barrel
       objectReference: {fileID: 0}
-    - target: {fileID: 7019201783283921306, guid: e07265e26ba95a74c810a312934e60e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7019201783283921306, guid: e07265e26ba95a74c810a312934e60e3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8255557742002180110, guid: e07265e26ba95a74c810a312934e60e3, type: 3}
       propertyPath: m_Layer
       value: 6
