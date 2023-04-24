@@ -70,6 +70,11 @@ public class ObjectTrigger : MonoBehaviour
         }
     }
 
+    private void DestroyBarrel()
+    {
+        
+    }
+
     private void TriggerObject()
     {
         Vector3 fwd = raycastObject.transform.TransformDirection(Vector3.forward);
@@ -82,8 +87,8 @@ public class ObjectTrigger : MonoBehaviour
             {
                 Debug.Log("Destructible Triggered");
                 //Trigger destroyed barrel
-                Instantiate(destroyedBarrel, objectHit.transform.position, objectHit.transform.rotation);
-                objectHit.collider.gameObject.SetActive(false);
+                objectHit.transform.GetChild(1).gameObject.SetActive(true);
+                objectHit.transform.GetChild(0).gameObject.SetActive(false);
 
                 //sound stuff
                 audioSource.clip = audioSound[Random.Range(0, 2)];
