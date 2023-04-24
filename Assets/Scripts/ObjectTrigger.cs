@@ -10,8 +10,6 @@ public class ObjectTrigger : MonoBehaviour
     public GameObject raycastObject;
     public GameObject keyItem;
     public GameObject keyDoor;
-    public GameObject destroyedBarrel;
-    public GameObject destroyedCrate;
     public GameObject heldWeapon;
     private int layerBDestroy;
     private int layerBKeyDestroy;
@@ -108,8 +106,8 @@ public class ObjectTrigger : MonoBehaviour
             {
                 Debug.Log("Key Destructible Triggered");
                 //Trigger destroyed barrel
-                Instantiate(destroyedBarrel, objectHit.transform.position, objectHit.transform.rotation);
-                objectHit.collider.gameObject.SetActive(false);
+                objectHit.transform.GetChild(1).gameObject.SetActive(true);
+                objectHit.transform.GetChild(0).gameObject.SetActive(false);
 
                 //sound stuff
                 audioSource.clip = audioSound[4];
@@ -129,8 +127,8 @@ public class ObjectTrigger : MonoBehaviour
             {
                 Debug.Log("Destructible Triggered");
                 //Trigger destroyed crate
-                Instantiate(destroyedCrate, objectHit.transform.position, objectHit.transform.rotation);
-                objectHit.collider.gameObject.SetActive(false);
+                objectHit.transform.GetChild(1).gameObject.SetActive(true);
+                objectHit.transform.GetChild(0).gameObject.SetActive(false);
 
                 //sound stuff
                 audioSource.clip = audioSound[Random.Range(2, 4)];
@@ -149,8 +147,8 @@ public class ObjectTrigger : MonoBehaviour
             {
                 Debug.Log("Key Destructible Triggered");
                 //Trigger destroyed crate
-                Instantiate(destroyedCrate, objectHit.transform.position, objectHit.transform.rotation);
-                objectHit.collider.gameObject.SetActive(false);
+                objectHit.transform.GetChild(1).gameObject.SetActive(true);
+                objectHit.transform.GetChild(0).gameObject.SetActive(false);
 
                 keyItem.SetActive(true);
                 objectHit.transform.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
